@@ -1,0 +1,53 @@
+<html id="html">
+  <head>
+    <!-- <link rel="stylesheet" href="res/saurav-custom.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="icon" type="image/png" href="" /> -->
+    <title>Freshness Meter</title>
+    
+    <style>
+      
+      html,
+      body {
+        font-family: "Fjalla One", sans-serif;
+        background: #27ae60;
+        font-weight: 400;
+        font-size: 15px;
+        color: white;
+        overflow: hidden;
+      }
+      .databox{
+        padding: 5vh;
+        background: black;
+        border-radius: 5vh;
+        text-align: center;
+      }
+
+      #cbody{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body id="cbody" onload="fresh()">
+    <div class="databox" id="databox">
+      <h1>Freshness Meter</h1>
+      <br>
+      <h3>Product Name: <span id="pname">pname</span></h3>
+      <!-- <br> -->
+      <h3>Product ID: <span id="prodid">prodid</span></h3>
+      <!-- <br> -->
+      <h3>Expiry Countdown: <span id="countdown">countdown</span></h3>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
