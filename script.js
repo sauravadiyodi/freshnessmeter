@@ -1,4 +1,4 @@
-// ?pname=Chips&pid=1044567&md=2020-06-10T10:45:56&ed=2020-06-15T10:45:56
+// ?pname=Chips&pid=1044567&md=2020-06-10T10:45:56&ed=2020-09-15T10:45:56
 
 function fresh(){
 
@@ -25,7 +25,7 @@ function fresh(){
         ampm = d.getHours() >= 12 ? 'pm' : 'am',
         months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
         days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    return days[d.getDay()]+', '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' '+hours+':'+minutes+ampm;
+    return days[d.getDay()]+', '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear();//+' '+hours+':'+minutes+ampm
     }
 
     var countDownDate = new Date(edate).getTime();
