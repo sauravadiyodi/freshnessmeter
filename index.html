@@ -18,36 +18,71 @@
       html,
       body {
         font-family: "Fjalla One", sans-serif;
-        background: #27ae60;
+        background: white;
         font-weight: 400;
         font-size: 15px;
         color: white;
         overflow: hidden;
+        margin: 0px;
       }
       .databox{
         padding: 5vh;
-        background: black;
-        border-radius: 5vh;
+        background: white;
+        color: black;
         text-align: center;
+      }
+
+      .headlogo{
+        top: 1vh;
+        left: 1vh;
+        background: black;
+        color: white;
+        width: fit-content;
+        font-size: 1.5vh;
+        padding: 01vh 4vh;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      #countdown{
+        color: #44bd32
       }
 
       #cbody{
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        font-size: 2.5vh;
+        height: 50vh;
+        bottom: 25vh;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
       }
     </style>
   </head>
-  <body id="cbody" onload="fresh()">
-    <div class="databox" id="databox">
-      <h1>Freshness Meter</h1>
-      <br>
-      <h3>Product Name: <span id="pname">pname</span></h3>
-      <!-- <br> -->
-      <h3>Product ID: <span id="prodid">prodid</span></h3>
-      <!-- <br> -->
-      <h3>Expiry Countdown: <span id="countdown">countdown</span></h3>
+  <body onload="fresh()">
+    <header>
+      <div class="headlogo">
+        <h1>Freshness Meter</h1>
+      </div>
+    </header>
+    
+    <div id="cbody">
+      <div class="databox" id="databox">
+        <br>
+        <h3>Product Name: <span id="pname">pname</span></h3>
+        <!-- <br> -->
+        <h3>Product ID: <span id="prodid">prodid</span></h3>
+        <!-- <br> -->
+        <h3>Expiry Date: <span id="expdate">expdate</span></h3>
+        <!-- <br> -->
+        <h3>Expiry Countdown: <span id="countdown">countdown</span></h3>
+      </div>
+      <script type="text/javascript" src="script.js"></script>
     </div>
-    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

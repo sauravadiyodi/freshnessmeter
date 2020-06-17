@@ -5,6 +5,7 @@ function fresh(){
     const urlstring = window.location.search;
 
     const urlParams = new URLSearchParams(urlstring);
+    
 
     const pname = urlParams.get('pname');
     const pid = urlParams.get('pid');
@@ -15,9 +16,20 @@ function fresh(){
 
     document.getElementById("pname").innerHTML = pname;
     document.getElementById("prodid").innerHTML = pid;
+    document.getElementById("expdate").innerHTML = formatAMPM();
+
+    function formatAMPM() {
+    var d = edate,
+        minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+        hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+        ampm = d.getHours() >= 12 ? 'pm' : 'am',
+        months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+        days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    return days[d.getDay()]+', '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' '+hours+':'+minutes+ampm;
+    }
 
     var countDownDate = new Date(edate).getTime();
-
+    
     // Update the count down every 1 second
     var x = setInterval(function() {
 
@@ -41,8 +53,7 @@ function fresh(){
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("countdown").innerHTML = "EXPIRED";
-            document.getElementById("cbody").style.background = "#c0392b";
-            document.getElementById("html").style.background = "#c0392b";
+            document.getElementById("countdown").style.color = "#c0392b";
         }
 
     }, 1000);
