@@ -14,6 +14,7 @@ function fresh(){
     const expdate = urlParams.get('ed');
     var edate = new Date(expdate);
 
+    document.getElementById("pimg").src = "./images/" + pname + ".png";
     document.getElementById("pname").innerHTML = pname;
     document.getElementById("prodid").innerHTML = pid;
     document.getElementById("expdate").innerHTML = formatAMPM();
